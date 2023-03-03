@@ -1,0 +1,45 @@
+button {
+  border: none;
+  cursor: pointer;
+}
+
+.btn-play {
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  background-color: #60558f;
+  i {
+    width: 16px;
+    height: 16px;
+    font-size: $font-lg;
+    color: #ffffff;
+  }
+}
+.btn-change {
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  background-color: #60558f;
+  i {
+    width: 12px;
+    height: 12px;
+    color: #ffffff;
+  }
+}
+.btn-small {
+  width: 36px;
+  height: 36px;
+  border-radius: 18px;
+  background-color: #ffffff;
+}
+.fa-share-nodes, .fa-heart {
+  width: 12px;
+  height: 12px;
+}
+
+.fa-share-nodes {
+  color: #60558f;
+}
+.fa-heart {
+  color: #ed5e74;
+}

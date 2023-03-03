@@ -1,0 +1,133 @@
+.music-player {
+  //padding: 20px;
+  position: absolute;
+  bottom: 0;
+  left: 0px;
+  height: 100%;
+  width: 100%;
+  background-color: #eeeff5;
+
+  .player-header {
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    width: 360px;
+    height: 65px;
+    background-color: rgba(42, 34, 77, 0.6);
+    position: absolute;
+    z-index: 5;
+  }
+
+
+  .player-center {
+    position: relative;
+    width: 100%;
+    height: 345px;
+    //margin: 20px auto;
+    overflow: hidden;
+    background-color:rgba(84, 66, 130, 0.26);
+  }
+  .player-center::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    height: 100%;
+    width: 100%;
+
+    z-index: 3;
+    background-image: url(/assets/img/cover.png);
+  }
+  .poster-container {
+    left: 0%;
+    display: flex;
+    height: 100%;
+    width: 100%;
+    margin: auto;
+    transition: all 0.2s ease;
+    position: absolute;
+
+    .poster {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+
+    }
+  }
+
+
+  .music-info {
+    display: flex;
+    width: 100%;
+    height: 65px;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    bottom: 0;
+    background-color: rgba(42,	34,	77, 0.600);
+    z-index: 4;
+    .names {
+      text-align: center;
+      .music-name {
+        font-size: $font-lg;
+        font-weight: $font-bold;
+      }
+
+      .artist-name {
+      }
+    }
+  }
+
+  .player-footer {
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+    justify-content: space-around;
+    background-color: #eeeff5;
+
+    .music-volume {
+      display: flex;
+      justify-content: space-between;
+      width: 100%;
+      margin: 10px 0;
+      position: relative;
+      top: -10px;
+      z-index: 5;
+    }
+    .music-volume .volume {
+      position: relative;
+      width: 100%;
+      height: 7px;
+      background-color: #fff;
+      cursor: pointer;
+    }
+
+    .music-current-length {
+      position: absolute;
+      height: 8px;
+      top: 50%;
+      left: 70%;
+      width: 30%;
+      transform: translate(0%, -50%);
+      background-color: #ed5e74;
+    }
+    .music-current-length-circle {
+      position: absolute;
+      top: 50%;
+      transform: translate(0%, -50%);
+      left: 69%;
+      width: 22px;
+      height: 22px;
+      border-radius: 11px;
+      background-color: #ffffff;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+
+      i {
+        width: 12px;
+        color: #60558f;
+      }
+    }
+  }
+}

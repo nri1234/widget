@@ -1,0 +1,37 @@
+.menu-btn {
+  justify-content: center;
+  display: flex;
+  align-items: center;
+  margin: auto;
+  padding-left: 25px;
+  height: auto;
+  button {
+    background: none;
+    margin-right: 25px;
+    border: none;
+    cursor: pointer;
+
+    &:last-child {
+      margin-right: 0;
+    }
+
+    &:focus {
+
+    }
+    i {
+      width: 16px;
+      height: 16px;
+      color: #ffff;
+    }
+  }
+}
+
+.playlist-open-btn {
+  cursor: pointer;
+  i {
+    opacity: 0.302;
+    width: 16px;
+    height: 13px;
+    color: #ffffff;
+  }
+}

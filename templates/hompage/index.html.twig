@@ -1,6 +1,5 @@
 {% extends 'base.html.twig' %}
 
-{% block title %}Hello HompageController!{% endblock %}
 
 {% block body %}
 <style>
@@ -8,13 +7,87 @@
     .example-wrapper code { background: #F5F5F5; padding: 2px 6px; }
 </style>
 
-<div class="example-wrapper">
-    <h1>Hello {{ controller_name }}! ✅</h1>
+<div class="container">
+    {% include 'hompage/partials/player.html.twig' %}
 
-    This friendly message is coming from:
-    <ul>
-        <li>Your controller at <code><a href="{{ 'C:/xampp/htdocs/widgetApp/src/Controller/HompageController.php'|file_link(0) }}">src/Controller/HompageController.php</a></code></li>
-        <li>Your template at <code><a href="{{ 'C:/xampp/htdocs/widgetApp/templates/hompage/index.html.twig'|file_link(0) }}">templates/hompage/index.html.twig</a></code></li>
-    </ul>
+    <div class="container">
+        <div class="player">
+            <div class="music-playlist">
+                <div class="playlist-header">
+                    <button class="playlist-close-btn btn-small">
+                        <i class="fa-solid fa-arrow-rotate-left playlist-back-icon"></i>
+                    </button>
+                    <div class="playlist-center-text">
+                        <p>Playlist</p>
+                    </div>
+                </div>
+                <div class="playlist"></div>
+            </div>
+            <div class="music-player">
+                <div class="player-header">
+                    <div class="menu-btn">
+                        <button>
+                            <i class="fa-sharp fa-solid fa-repeat"></i>
+                        </button>
+                       <button>
+                           <i class="fa-solid fa-rotate-right"></i>
+                       </button>
+                        <button>
+                            <i class="fa-solid fa-shuffle"></i>
+                       </button>
+                    </div>
+                    <div class="playlist-open-btn">
+                        <i class="fa-solid fa-bars"></i>
+                    </div>
+                </div>
+                <div class="player-center">
+                    <div class="poster-container"></div>
+                    <div class="music-info">
+                        <div class="names">
+                            <p class="music-name"></p>
+                            <p class="artist-name"></p>
+                        </div>
+                        <div class="heart-btn">
+                            <i class="fa fa-heart-o heart-icon"></i>
+                        </div>
+                    </div>
+                </div>
+                <div class="player-footer">
+
+                    <div class="music-volume">
+                        <div class="volume">
+                            <div class="music-current-length"></div>
+                            <div class="music-current-length-circle">
+                                <i class="fa-solid fa-volume-low"></i>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="music-controls">
+                        <button class="btn-small">
+                            <i class="fa-solid fa-share-nodes"></i>
+                        </button>
+                        <div class="main-control">
+                            <button class="btn-change">
+                                <i class="fa fa-step-backward back-btn"></i>
+                            </button>
+
+                            <button class="btn-play">
+                                <i class="fa-solid fa-play play-btn"></i>
+                            </button>
+
+                            <button class="btn-change">
+                                <i class="fa fa-step-forward forward-btn"></i>
+                            </button>
+
+                        </div>
+                        <button class="btn-small">
+                            <i class="fa-solid fa-heart"></i>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 {% endblock %}
