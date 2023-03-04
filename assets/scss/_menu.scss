@@ -1,10 +1,10 @@
 .menu-btn {
   justify-content: center;
-  display: flex;
-  align-items: center;
+ @include align-center;
   margin: auto;
   padding-left: 25px;
   height: auto;
+
   button {
     background: none;
     margin-right: 25px;
@@ -15,12 +15,8 @@
       margin-right: 0;
     }
 
-    &:focus {
-
-    }
     i {
-      width: 16px;
-      height: 16px;
+      @include size(16px, 16px);
       color: #ffff;
     }
   }

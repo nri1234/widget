@@ -5,43 +5,31 @@ const musicInfo = [
         musicName: "Saza E Maut",
         musicTime: "3:15",
         artistName: "Raftaar x KR$NA",
-        musicPoster: 'cover.png',
-
     },
     {
         musicName: "Click Pow Get Down",
         musicTime: "3:15",
-        artistName: "Raftaar x Fortnite",
-        musicPoster: "https://i.ytimg.com/vi/jTLhQf5KJSc/maxresdefault.jpg",
-
+        artistName: "Raftaar x fff Fortnite",
     },
     {
-        musicName: "Tu Phir Se Aana",
-        musicTime: "3:15",
-        artistName: "Raftaar x Salim Merchant x Karma",
-        musicPoster:
-            "https://1.bp.blogspot.com/-kX21dGUuTdM/X85ij1SBeEI/AAAAAAAAKK4/feboCtDKkls19cZw3glZWRdJ6J8alCm-gCNcBGAsYHQ/s16000/Tu%2BAana%2BPhir%2BSe%2BRap%2BSong%2BLyrics%2BBy%2BRaftaar.jpg"
+        musicName: "Tu Phir Se KAAAana",
+        musicTime: "1:25",
+        artistName: "Raftaar x Salim Merchant rewe Karma",
     },
     {
-        musicName: "Saza E Maut",
-        musicTime: "3:15",
+        musicName: "Saza E Mauft",
+        musicTime: "3:45",
         artistName: "Raftaar x KR$NA",
-        musicPoster: "https://i.ytimg.com/vi/o907r6NsK9s/maxresdefault.jpg",
-
     },
     {
         musicName: "Click Pow Get Down",
-        musicTime: "3:15",
+        musicTime: "2:15",
         artistName: "Raftaar x Fortnite",
-        musicPoster: "https://i.ytimg.com/vi/jTLhQf5KJSc/maxresdefault.jpg",
-
     },
     {
         musicName: "Tu Phir Se Aana",
-        musicTime: "3:15",
-        artistName: "Raftaar x Salim Merchant x Karma",
-        musicPoster:
-            "https://1.bp.blogspot.com/-kX21dGUuTdM/X85ij1SBeEI/AAAAAAAAKK4/feboCtDKkls19cZw3glZWRdJ6J8alCm-gCNcBGAsYHQ/s16000/Tu%2BAana%2BPhir%2BSe%2BRap%2BSong%2BLyrics%2BBy%2BRaftaar.jpg"
+        musicTime: "1:15",
+        artistName: "Raftaar x Salim Merchant xxx Karma",
     }
 
 ];
@@ -123,23 +111,11 @@ playlistItems.forEach((item, index) => {
 });
 
 
-// swap left and right
-
-const posterContainer = document.querySelector(".poster-container");
-// musicInfo.forEach((item, index) => {
-//     let poster = document.createElement("img");
-//     poster.classList.add("poster");
-//     poster.src = item.musicPoster;
-//     poster.alt = item.musicName;
-//     posterContainer.appendChild(poster);
-// });
-
 let musicName = document.querySelector(".music-name");
 let artistName = document.querySelector(".artist-name");
 let musicIndex = 0;
 const currentMusic = (index) => {
     let i = index % musicInfo.length;
-    posterContainer.style.left = -(index * 100) + "%";
     musicName.innerText = musicInfo[i].musicName;
     artistName.innerText = musicInfo[i].artistName;
 };
@@ -184,7 +160,6 @@ const playMusic = () => {
     isPlaying = true;
     playBtn.classList.replace("fa-play", "fa-pause");
 };
-
 function pauseMusic() {
     isPlaying = false;
     playBtn.classList.replace("fa-pause", "fa-play");

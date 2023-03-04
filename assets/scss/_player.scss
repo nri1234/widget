@@ -1,79 +1,64 @@
+.player {
+  position: relative;
+  @include align-center;
+  flex-direction: column;
+  margin: 40px auto;
+  height: 480px;
+  max-width: 360px;
+  border-radius: 30px;
+  color: $main-color;
+  overflow: hidden;
+}
+
 .music-player {
-  //padding: 20px;
   position: absolute;
   bottom: 0;
-  left: 0px;
-  height: 100%;
-  width: 100%;
+  left: 0;
+  @include size(100%, 100%);
   background-color: #eeeff5;
 
   .player-header {
     padding: 20px;
     display: flex;
     justify-content: space-between;
-    width: 360px;
-    height: 65px;
+    @include size(360px, 65px);
     background-color: rgba(42, 34, 77, 0.6);
     position: absolute;
     z-index: 5;
   }
 
-
   .player-center {
     position: relative;
-    width: 100%;
-    height: 345px;
-    //margin: 20px auto;
+    @include size(100%, 345px);
     overflow: hidden;
     background-color:rgba(84, 66, 130, 0.26);
-  }
-  .player-center::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    left: 0;
-    height: 100%;
-    width: 100%;
 
-    z-index: 3;
-    background-image: url(/assets/img/cover.png);
-  }
-  .poster-container {
-    left: 0%;
-    display: flex;
-    height: 100%;
-    width: 100%;
-    margin: auto;
-    transition: all 0.2s ease;
-    position: absolute;
-
-    .poster {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-
+    &::before {
+      content: "";
+      position: absolute;
+      top: 0;
+      left: 0;
+      @include size(100%, 100%);
+      z-index: 3;
+      background-image: url(/assets/img/cover.png);
     }
   }
 
-
   .music-info {
-    display: flex;
-    width: 100%;
-    height: 65px;
+    @include align-center;
+    @include size(100%, 65px);
     justify-content: center;
-    align-items: center;
     position: absolute;
     bottom: 0;
     background-color: rgba(42,	34,	77, 0.600);
     z-index: 4;
+
     .names {
       text-align: center;
+
       .music-name {
         font-size: $font-lg;
         font-weight: $font-bold;
-      }
-
-      .artist-name {
       }
     }
   }
@@ -94,35 +79,33 @@
       top: -10px;
       z-index: 5;
     }
+
     .music-volume .volume {
       position: relative;
-      width: 100%;
-      height: 7px;
-      background-color: #fff;
+     @include size(100%, 7px);
+      background-color: $main-color;
       cursor: pointer;
     }
 
     .music-current-length {
       position: absolute;
-      height: 8px;
       top: 50%;
       left: 70%;
-      width: 30%;
+      @include size(30%, 8px);
       transform: translate(0%, -50%);
       background-color: #ed5e74;
     }
+
     .music-current-length-circle {
       position: absolute;
       top: 50%;
-      transform: translate(0%, -50%);
       left: 69%;
-      width: 22px;
-      height: 22px;
+      transform: translate(0%, -50%);
+      @include size(22px, 22px);
       border-radius: 11px;
-      background-color: #ffffff;
-      display: flex;
+      background-color: $main-color;
+      @include align-center;
       justify-content: center;
-      align-items: center;
 
       i {
         width: 12px;
@@ -130,4 +113,8 @@
       }
     }
   }
+}
+
+.music-player.open  {
+  display: none;
 }
